@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.example.library.my' // CREATE A GROUP ID FOR YOUR LIBRARY
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.example.library.my' // CREATE A GROUP ID FOR YOUR LIBRARY
+                artifactId 'myexamplelibrary' // THE NAME OF YOUR MODULE
+
+                name 'myexample' // YOUR LIBRARY NAME
+                description 'Example library.' // YOUR LIBRARY DESCRIPTION
+                url 'https://github.com/ZAMRI94/MyExample' // YOUR SITE
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'zamri94' //YOUR ID
+                        name 'zamri yusof' //YOUR NAME
+                        email 'zamriyusof1994@gmail.com' //YOUR EMAIL
+                    }
+                }
+                scm {
+                    connection 'https://github.com/ZAMRI94/MyExample.git' // YOUR GIT REPO
+                    developerConnection 'https://github.com/ZAMRI94/MyExample.git' // YOUR GIT REPO
+                    url 'https://github.com/ZAMRI94/MyExample' // YOUR SITE
+
+                }
+            }
+        }
+    }
+}
